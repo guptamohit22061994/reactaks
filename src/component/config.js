@@ -1,8 +1,8 @@
-// import Card from './Card';
+export const IMG_CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
 
 
-const restaurantList=[
+export const restaurantList=[
         
     {
      
@@ -1023,42 +1023,3 @@ const restaurantList=[
   
   
   ];
-  const RestaurantCard= ({name, cuisines, cloudinaryImageId,sla}) => {
-   
-    // console.log(props);
-    return(
-    <div>
-    <div className="card">
-    <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ cloudinaryImageId} style={{width:"300px",}}/>
-    <h3>{name}</h3>
-    <p>{cuisines.join(",")}</p>
-    <p className="card-des">{sla?.lastMileTravelString } </p>
-    </div>
-    </div>
-    );
-    };
-  
-  // const carddetail={
-  // image:"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/8b200f2fe8a1d6130df8b0c546edad89",
-  // name:"Bakingo",
-  // cusines:"Bakery, Desserts, Beverages, Snacks",
-  // lastMileTravelString: "3.2"
-  //     };
-  
-  const Body=()=>{
-    return(
-        <>
-        <div className="d-flex justify-content-between align-items-center">
-        {
-      restaurantList.map((restaurant)=>{
-        return <RestaurantCard {...restaurant.info} key={restaurant.info.id}/>
-      })
-    }
-        
-        </div>
-  
-        </>
-    );
-  };
-
-export default Body;
