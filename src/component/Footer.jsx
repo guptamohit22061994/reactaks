@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <>
@@ -8,9 +9,9 @@ const Footer = () => {
                     </div>
                     <div>
                         <ul className="d-flex justify-content-between list-style-none align-items-center">
-                            <li className="pr-2">  Home</li>
-                            <li className="pr-2">  About</li>
-                            <li className="pr-2">  Contact</li>
+                            <Link to="/"><li className="pr-2">  Home</li></Link>
+                            <Link to="/about"> <li className="pr-2">  About</li></Link>
+                            <Link to="/contact-us"><li className="pr-2">  Contact</li></Link>
                         </ul>
                     </div>
                 </div>
